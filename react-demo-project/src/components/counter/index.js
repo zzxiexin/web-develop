@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
-// import store from '../../store';
-import { increment, decrement } from '../../store/module/counter';
-import { getMovieData } from '../../store/module/async_module';
+// import store from '../../demo/store';
+import { increment, decrement } from '../../demo/store/module/counter';
+import { getMovieData } from '../../demo/store/module/async_module';
 const Counter = () => {
   // 通过useSelector直接拿到store中定义的value
   const { value } = useSelector((store) => store.counter);

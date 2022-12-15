@@ -31,7 +31,7 @@ export const movieSlice = createSlice({
   extraReducers(builder) {
     builder
       .addCase(getMovieData.pending, (state) => {
-        console.log('🚀 ~ 进行中！');
+        console.log('🚀 ~ 进行中！', state);
       })
       .addCase(getMovieData.fulfilled, (state, { payload }) => {
         console.log('🚀 ~ fulfilled', payload);
