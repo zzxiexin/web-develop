@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>center</title>
+    <style>
+        html,
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        div.outer {
+            width: 200px;
+            height: 100px;
+            border: 1px solid #000;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<strong>水平居中</strong>
+<!-- 行内水平居中 -->
+<div style="text-align: center;" class="outer">
+    干嘛呢
+</div>
+<!-- 块级水平居中 -->
+<div class="outer">
+    <div style="margin: 0 auto; width: 50px;">干嘛呢</div>
+</div>
+<!-- flex水平居中 -->
+<div class="outer" style="display: flex;justify-content: center;">
+    干嘛呢
+</div>
+<!-- postion水平居中 -->
+<div class="outer" style="position: relative;">
+    <div style="width: 60px;left: 50%; margin-left: -30px;position: absolute;">干嘛呢</div>
+</div>
+<!-- transform水平居中 -->
+<div class="outer" style="position: relative;">
+    <div style="position: absolute;left: 50%; transform: translateX(-50%);">
+        干嘛呢
+    </div>
+</div>
+
+<br />
+<strong>垂直居中</strong>
+<!-- 行内垂直居中 -->
+<div class="outer" style="line-height: 100px;">
+    干嘛呢
+</div>
+<div>
+
+</div>
+
+</html>

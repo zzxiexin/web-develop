@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+        @keyframes changeWidth {
+            0% {
+                width: 0px;
+                height: 0px;
+                background-color: blue;
+            }
+            50% {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+            100% {
+                width: 0px;
+                height: 0px;
+                background-color: blue;
+            }
+        }
+        
+        .testDiv {
+            animation: changeWidth 8s infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="testDiv">
+
+    </div>
+</body>
+
+</html>
