@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闭包</title>
+</head>
+
+<body>
+    <button onclick="clickDebounce()">clickDebounce</button>
+    <button onclick="clickThrottle()">clickThrottle</button>
+    <script>
+        function throttle(fn, delay) {
+            let time = new Date();
+            return function() {
+                if (new Date().getSeconds() - time.getSeconds() > delay) {
+                    fn();
+                    time = new Date();
+                }
+            }
+        }
+
+        function debounce(fn, delay) {
+            let timer = null
+            return function() {
+                if (timer) {
+                    clearTimeout(timer)
+                }
+                timer = setTimeout(function() {
+                    fn();
+                }, delay * 1000)
+            }
+        }
+        var clickDebounce = debounce(() => {
+            console.log('debounce')
+        }, 4);
+
+        var clickThrottle = throttle(() => {
+            console.log('debounce')
+        }, 4)
+    </script>
+</body>
+
+</html>

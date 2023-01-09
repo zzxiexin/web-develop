@@ -1,0 +1,7 @@
+{
+    "name": "js",
+    "scripts": {
+        "install": "npm i live-server -g",
+        "server": "live-server"
+    }
+}

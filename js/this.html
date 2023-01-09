@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this</title>
+</head>
+
+<body>
+    <script>
+        // var person1 = {
+        //     fullName: function(sex) {
+        //         return this.firstName + " " + this.lastName + " " + sex;
+        //     }
+        // }
+        // var person2 = {
+        //     firstName: "John",
+        //     lastName: "Doe",
+        // }
+        // console.log(person1.fullName.call(person2, 'man')); // 返回 "John Doe"
+        name = "js";
+        const fun = () => {
+            console.log(this.name)
+        }
+        const obj = {
+                name: 'javascript',
+                fun
+            }
+            // 箭头函数改变不了this，只有函数可以
+        var a = obj.fun.bind(obj);
+        a();
+
+        function passArgs(...args) {
+            console.log(args)
+        }
+        passArgs(1, 2, 3, 4)
+        passArgs([1, 2, 3, 4, 5])
+        passArgs({
+            a: 1,
+            b: 2
+        })
+
+        function sum(...args) {
+            let sum = 0;
+            let i = 0;
+            while (i <= args.length) {
+                sum += i;
+                i += 1
+            }
+            return sum;
+        }
+        console.log(sum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+    </script>
+</body>
+
+</html>

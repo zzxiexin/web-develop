@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 字符串常用方法
+        var str = "test str";
+        console.log('测试字符串是：', str)
+        console.log('返回指定索引2位置的字符', str.charAt(2))
+        console.log('返回指定索引位2置字符的 Unicode 值', str.charCodeAt(2))
+        console.log('concat 不会改变字符串', str.concat(' str concat'))
+        console.log('现在字符串', str)
+        console.log('replace 不会改变字符串', str.replace(/t/g, 'x'))
+        console.log('现在字符串', str)
+        console.log('slice 不会改变字符串', str.slice(0, 3))
+        console.log('现在字符串', str)
+        console.log('split 不会改变字符串', str.split(''))
+        console.log('现在字符串', str)
+        console.log('substr 不会改变字符串', str.substr(1, 3))
+        console.log('现在字符串', str)
+        console.log('substring 不会改变字符串', str.substring(0, 3))
+        console.log('现在字符串', str)
+    </script>
+</body>
+
+</html>
