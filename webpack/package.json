@@ -1,0 +1,9 @@
+{
+    "name": "webpack",
+    "scripts": {
+        "webpack": "webpack"
+    },
+    "dependencies": {
+        "lodash": "^4.17.21"
+    }
+}
